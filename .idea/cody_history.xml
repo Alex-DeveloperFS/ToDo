@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChatHistory">
+    <accountData>
+      <list>
+        <AccountData>
+          <accountId value="VXNlcjo0NzM2NTk=" />
+          <chats>
+            <list>
+              <chat>
+                <internalId value="afc51f08-86fb-45f5-9a0b-dc16a0daad10" />
+                <llm>
+                  <llm>
+                    <model value="anthropic/claude-3-sonnet-20240229" />
+                    <provider value="Anthropic" />
+                    <title value="Claude 3 Sonnet" />
+                  </llm>
+                </llm>
+                <messages>
+                  <list>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="ривет" />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value="Здравствуйте! Я Коди, искусственный интеллект, созданный для помощи в программировании и работе с кодом. Буду рад помочь вам с любыми задачами, связанными с написанием, пониманием или отладкой кода на различных языках программирования. Не стесняйтесь задавать мне вопросы!" />
+                    </message>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="напиши код react слайдер" />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value="Конечно, вот пример простого слайдера на React с использованием хуков:&#10;&#10;```jsx&#10;import React, { useState } from 'react';&#10;import './Slider.css';&#10;&#10;const Slider = ({ images }) =&gt; {&#10;  const [currentIndex, setCurrentIndex] = useState(0);&#10;&#10;  const goToPrevious = () =&gt; {&#10;    const isFirstSlide = currentIndex === 0;&#10;    const newIndex = isFirstSlide ? images.length - 1 : currentIndex - 1;&#10;    setCurrentIndex(newIndex);&#10;  };&#10;&#10;  const goToNext = () =&gt; {&#10;    const isLastSlide = currentIndex === images.length - 1;&#10;    const newIndex = isLastSlide ? 0 : currentIndex + 1;&#10;    setCurrentIndex(newIndex);&#10;  };&#10;&#10;  const goToSlide = (slideIndex) =&gt; {&#10;    setCurrentIndex(slideIndex);&#10;  };&#10;&#10;  return (&#10;    &lt;div className=&quot;slider&quot;&gt;&#10;      &lt;div className=&quot;left-arrow&quot; onClick={goToPrevious}&gt;&#10;        ⬅️&#10;      &lt;/div&gt;&#10;      &lt;div className=&quot;slide&quot; style={{ backgroundImage: `url(${images[currentIndex]})` }}&gt;&#10;      &lt;/div&gt;&#10;      &lt;div className=&quot;right-arrow&quot; onClick={goToNext}&gt;&#10;        ➡️&#10;      &lt;/div&gt;&#10;      &lt;div className=&quot;slide-dots&quot;&gt;&#10;        {images.map((_, slideIndex) =&gt; (&#10;          &lt;div&#10;            key={slideIndex}&#10;            className={`dot ${currentIndex === slideIndex ? 'active' : ''}`}&#10;            onClick={() =&gt; goToSlide(slideIndex)}&#10;          &gt;&lt;/div&gt;&#10;        ))}&#10;      &lt;/div&gt;&#10;    &lt;/div&gt;&#10;  );&#10;};&#10;&#10;export default Slider;&#10;```&#10;&#10;И соответствующие стили в `Slider.css`:&#10;&#10;```css&#10;.slider {&#10;  position: relative;&#10;  height: 500px;&#10;  display: flex;&#10;  justify-content: center;&#10;  align-items: center;&#10;}&#10;&#10;.slide {&#10;  width: 100%;&#10;  height: 100%;&#10;  background-size: cover;&#10;  background-position: center;&#10;}&#10;&#10;.left-arrow, .right-arrow {&#10;  position: absolute;&#10;  top: 50%;&#10;  transform: translateY(-50%);&#10;  font-size: 2rem;&#10;  cursor: pointer;&#10;}&#10;&#10;.left-arrow {&#10;  left: 1rem;&#10;}&#10;&#10;.right-arrow {&#10;  right: 1rem;&#10;}&#10;&#10;.slide-dots {&#10;  position: absolute;&#10;  bottom: 1rem;&#10;  display: flex;&#10;  justify-content: center;&#10;  width: 100%;&#10;}&#10;&#10;.dot {&#10;  width: 10px;&#10;  height: 10px;&#10;  border-radius: 50%;&#10;  background-color: gray;&#10;  margin: 0 5px;&#10;  cursor: pointer;&#10;}&#10;&#10;.dot.active {&#10;  background-color: black;&#10;}&#10;```&#10;&#10;В этом примере компонент `Slider` принимает массив изображений в виде `prop` `images`. Внутри компонента используются хуки `useState` для отслеживания текущего индекса слайда. Функции `goToPrevious` и `goToNext` обновляют индекс при нажатии на стрелки. Функция `goToSlide` позволяет перейти на определенный слайд при нажатии на точку. Компонент отображает текущий слайд, стрелки навигации и точки для перехода на другие слайды.&#10;&#10;Вы можете адаптировать этот код в соответствии с вашими потребностями, добавляя дополнительные функции, такие как автоматическое переключение слайдов, анимации и т.д." />
+                    </message>
+                  </list>
+                </messages>
+                <updatedAt value="2024-06-23T17:31:35.6063678" />
+              </chat>
+            </list>
+          </chats>
+          <defaultLlm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </defaultLlm>
+        </AccountData>
+      </list>
+    </accountData>
+  </component>
+</project>

@@ -1,0 +1,142 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+    text-decoration: inherit;
+}
+
+h1 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+input,
+button {
+    padding: 15px 20px;
+    font-size: 1rem;
+    border-radius: 7px;
+    border: 1px solid lightgray;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+button > * {
+    font-size: 1.5rem;
+}
+
+button:hover {
+    background-color: lightsteelblue;
+    border-color: lightsteelblue;
+}
+
+input {
+    flex-grow: 1;
+}
+
+form {
+    display: flex;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto 40px;
+}
+
+.container {
+    width: min(100% - 40px, 768px);
+    margin-inline: auto;
+}
+
+.todos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.todos__actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.todos__empty {
+    text-align: center;
+    font-size: 2em;
+}
+
+.todo {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    background-color: lightsteelblue;
+    padding: 20px;
+    border-radius: 7px;
+    border: 2px solid steelblue;
+    margin-bottom: 20px;
+}
+
+.todo--completed {
+    background-color: #f1f1f1;
+    border-color: gray;
+    color: gray;
+}
+
+.todo--completed .todo__icon,
+.todo--completed .todo__delete-btn,
+.todo--completed .todo__check-btn {
+    color: gray;
+}
+
+.todo__id {
+    position: absolute;
+    margin: -20px 0 0 -15px;
+    font-size: 0.85em;
+}
+
+.todo__title {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.todo__icon {
+    font-size: 1.5rem;
+    color: darkslateblue;
+    position: relative;
+    top: 5px;
+}
+
+.todo__delete-btn,
+.todo__check-btn {
+    font-size: 1.5rem;
+    color: indigo;
+    position: relative;
+    top: 5px;
+    cursor: pointer;
+    transition: scale 0.3s, color 0.3s;
+}
+
+.todo__delete-btn:hover {
+    color: red
+}
+
+.todo__check-btn:hover {
+    color: green;
+}
+
+.todo__delete-btn:hover,
+.todo__check-btn:hover {
+    scale: 1.5;
+}
